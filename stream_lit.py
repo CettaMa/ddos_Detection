@@ -57,7 +57,7 @@ if uploaded_file:
 
                 result_df = df.copy()
                 result_df["Prediction"] = preds_named
-
+                result_df.set_index("index", inplace=True)
                 st.subheader("✅ Prediction Results")
                 st.dataframe(result_df)
 
