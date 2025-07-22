@@ -55,7 +55,7 @@ if uploaded_file:
                 # Map numeric predictions to class names
                 preds_named = [class_label_map.get(p, f"Unknown ({p})") for p in preds]
 
-                result_df = df.copy()
+                result_df = df["index"]
                 result_df["Prediction"] = preds_named
                 result_df.set_index("index", inplace=True)
                 st.subheader("✅ Prediction Results")
